@@ -1,0 +1,22 @@
+
+services:
+  ruby:
+    build:
+      context: .
+      dockerfile: ruby.dockerfile
+    container_name: ruby
+    restart: "unless-stopped"
+    command: "bundle exec jekyll serve --force-polling -H 0.0.0.0 -P 4000"
+    ports:
+      - "4000:4000"
+
+    expose:
+      - "4000"
+    volumes:
+      - "/Users/rico/Documents/Visual Studio Code/symboreka.github.io:/usr/src/app:rw"
+
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: "512M"
