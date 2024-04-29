@@ -40,7 +40,8 @@ void Decoder::printBandResistor(BandResistor resistor) {
 
 
 <details>
-  <summary><b>Video 5: “How C++ Works” </b></summary>
+  <summary><b>Video 5: “How C++ Works” </b>
+  </summary>
   
 - Understand what ‘#include’ does
 - learn what an ‘entry function’ is and how it’s called in C++
