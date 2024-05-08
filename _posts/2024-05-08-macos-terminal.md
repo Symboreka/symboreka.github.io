@@ -2,8 +2,8 @@
 layout: post
 title: MacOS Terminal Customization
 date: 2024-05-08
-categories: [post, Programming, MacOS]
-tags: [programming, macos, terminal, zsh, iterm2]
+categories: [post, Terminal, MacOS]
+tags: [macos, terminal, zsh, iterm2, powerlevel10k]
 ---
 
 ## Introduction
