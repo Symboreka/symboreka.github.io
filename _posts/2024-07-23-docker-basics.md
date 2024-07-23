@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker Basics
-date: 2024-04-26
+date: 2024-07-23
 categories: [post, docker]
 tags: [docker, deutsch, german]
 ---
