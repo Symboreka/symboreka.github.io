@@ -6,8 +6,6 @@ categories: [post, docker]
 tags: [docker, deutsch, german]
 ---
 
-# Docker Basics
-
 This post is an online-reference for the notes I took during a docker workshop. Other than my usual posts, this article is in german, as the workshop was in german.
 
 
