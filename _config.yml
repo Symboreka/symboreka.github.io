@@ -16,7 +16,7 @@ timezone: Europe/Berlin
 
 title: Ricardo Sendes - Home # the main title
 
-tagline: Guides and Writeups by Ricardo Sendes # it will display as the sub-title
+tagline: Guides and Writeups # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Guides to tech projects
