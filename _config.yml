@@ -19,11 +19,11 @@ title: Ricardo Sendes - Home # the main title
 tagline: Guides and Writeups by Ricardo Sendes # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Guides to tech Projects
+  Guides to tech projects
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://ricardosendes.de"
+url: "https://ricardosendes.com"
 
 github:
   username: symboreka # change to your github username
@@ -38,11 +38,11 @@ social:
   email: r.sendes@fh-muenster.de # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/symboreka # change to your twitter homepage
-    - https://github.com/symboreka # change to your github homepage
+    - https://twitter.com/symboreka
+    - https://github.com/symboreka
+    - https://www.linkedin.com/in/ricardo-sendes-53a676222/
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
 
 google_site_verification: # fill in to your verification string
 
