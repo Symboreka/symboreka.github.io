@@ -56,3 +56,5 @@ void Decoder::printBandResistor(BandResistor resistor) {
     <li>Fix the bug and see what .obj files are created</li>
   </ul>
 </details>
+
+$(A * B)^T = B^T * A^T$
