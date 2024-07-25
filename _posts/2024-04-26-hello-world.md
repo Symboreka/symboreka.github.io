@@ -22,7 +22,7 @@ This is gonna be my first post!
 classDiagram
     class MyClass{
         + var1: int
-        + printStylish() void
+        + printStylish(): void
     }
 {% endmermaid %}
 
@@ -56,6 +56,3 @@ void Decoder::printBandResistor(BandResistor resistor) {
     <li>Fix the bug and see what .obj files are created</li>
   </ul>
 </details>
-
-$$ (A * B)^T = B^T * A^T $$
-$$ (A * B)^T = B^T * A^T $$
