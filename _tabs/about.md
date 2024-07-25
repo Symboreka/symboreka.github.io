@@ -20,7 +20,6 @@ Outside of work, I am passionate about Cycling and video games. I love spending 
 I used to have a twitch and youtube channel; most videos are unlisted, but still accessible via my discord server. I mainly streamed the game [Osu](https://osu.ppy.sh/).
 Sometimes I still upload unlisted videos of funny moments that happen during gameplay.
 
-## Visual and Interactive Elements
 ![Ricardo Sendes](../assets/images/Rico_500.jpeg)
 
 ## Let's Connect
