@@ -57,4 +57,4 @@ void Decoder::printBandResistor(BandResistor resistor) {
   </ul>
 </details>
 
-$(A * B)^T = B^T * A^T$
+$$(A * B)^T = B^T * A^T$$
