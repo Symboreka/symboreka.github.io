@@ -9,16 +9,16 @@ tags: [vim, editor, cheatsheet, neovim]
 ## Introduction
 
 Vim is mostly known by its memes on how nobody is able to quit (`:q!` btw).
-Here I want to demystify the rabbit hole of vim and create a Cheatsheet as a reference mostly for myself. 
+Here I want to demystify the rabbit hole of vim and create a Cheatsheet as a reference mostly, for myself. 
 
-The reasons why I want to use vim in my life more are the following. Reducing the reliance of the mouse is something I look forward to. To be clear, this is not about speed. While speed is cool and all, at the current stage of my life, my typing speed is not the bottleneck of my development. Simply the fact that I dont have to use my mouse/trackpad is the goal. "Hand me a keyboard and leave me to it" is the idea. My current endgoal is to see a low percentage keyboard and not be afraid to use it, but rather excited.
+The reasons why I want to use vim in my life more are the following. Reducing the reliance on the mouse is something I look forward to. To be clear, this is not about speed. While speed is cool and all, at the current stage of my life, my typing speed is not the bottleneck of my development. Simply the fact that I don't have to use my mouse/trackpad is the goal. "Hand me a keyboard and leave me to it" is the idea. My current goal is to see a low percentage keyboard and not be afraid to use it, but rather excited.
 
 This article will be a continuous work in progress, as I learn new things.
 
 ---
 ## Modes
 
-There are several Modes in vim. Everytime you use vim, you are in one of those modes. After starting up vim, you are in "Normal Mode". You cannot write text here, but you can navigate and edit your text. Here is a quick overview of the modes in vim
+There are several Modes in vim. Every time you use vim, you are in one of those modes. After starting up vim, you are in "Normal Mode". You cannot write text here, but you can navigate and edit your text. Here is a quick overview of the modes in vim
 
 Mode | Keys | Purpose
 --|--|--
@@ -47,7 +47,7 @@ Keys | Result
 
 ---
 ## Motions
-Motions are a powerful way that vim uses to combine the keyboard shortcuts into keymaps. The best way to explain them are by example. Lets look at `d a p` for example. `d` here stands for delete. `a` tells the deletion command to delete around something. `p` tells it to delete around the paragraph you are currently in. This can also be combined with curly braces or any other text object selector. In this post, you will learn more cool ways to use motions. 
+Motions are a powerful way that vim uses to combine the keyboard shortcuts into keymaps. The best way to explain them is by example. Let's look at `d a p` for example. `d` here stands for delete. `a` tells the deletion command to delete around something. `p` tells it to delete around the paragraph you are currently in. This can also be combined with curly braces or any other text object selector. In this post, you will learn more cool ways to use motions. 
 
 
 ---
@@ -75,20 +75,20 @@ Keys | Purpose
 `?` | open find menu, search backwards (I dont actually use this one)
 `n` | go to next search result
 `N` | go to previous search result
-`*` | find all occurances of the word your cursor is at
+`*` | find all occurence of the word your cursor is at
 
 Then replacing the text that was found is done with the `c`(change) key.
-A good motion to get started is `c i w`. This means "change in word" and will replace the word your cursor is at and put you in insert mode. After you made your changes you can hit `esc` to go back to normal mode, `n` to find the next occurance and hit `.` to replay the action you made before. This will rename the next occurance of your search to your newly given name.
+A good motion to get started is `c i w`. This means "change in word" and will replace the word your cursor is at and put you in insert mode. After you made your changes you can hit `esc` to go back to normal mode, `n` to find the next occurence and hit `.` to replay the action you made before. This will rename the next occurence of your search to your newly given name.
 
 
 ---
 ## Copy and Paste
-The following commands are useful for copy and paste. Intuitively copying in vim is named yanking. so `y` is used to yank text, `p` to paste.
+The following commands are useful for copy and paste. Intuitively, copying in vim is named yanking. So `y` is used to yank text, `p` to paste.
 
 Key | Result
 -- | --
-`y` (normal mode)| yank text. e.G. `y w` copys the word on the cursor
-`y` (visual mode) | yank highlightet text
+`y` (normal mode)| yank text. e.G. `y w` copies the word on the cursor
+`y` (visual mode) | yank highlighted text
 `*y`| copy into system clipboard
 `p` | paste text at cursor
 
@@ -116,7 +116,7 @@ Motion | Result
 --|--
 `gu$` | uncapitalize characters until end of line
 `gU$` | capitalize characters until end of line
-`guu` | caputalize whole line
+`guu` | capitalize whole line
 `gv` | reselect previous selection
 
 
