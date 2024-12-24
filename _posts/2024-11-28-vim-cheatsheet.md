@@ -19,6 +19,7 @@ This article will be a continuous work in progress, as I learn new things.
 ## Modes
 
 There are several Modes in vim. Every time you use vim, you are in one of those modes. After starting up vim, you are in "Normal Mode". You cannot write text here, but you can navigate and edit your text. Here is a quick overview of the modes in vim
+For beginners, only the first 4 modes are important.
 
 Mode | Keys | Purpose
 --|--|--
@@ -26,6 +27,7 @@ Normal | `Esc` | Navigate, modify text
 Insert | `a`, `A`, `i`, `I`, `o`, `O` | write text
 Visual | `v`, `V` | highlight text
 Command | `:` | Enter commands e.G. save or quit
+Replace | `CTRL+R` | Replace characters as you type. Previous characters are saved, therefore if you delete something you added in this mode, the previous characters reappear
 
 ---
 
@@ -49,6 +51,24 @@ Keys | Result
 ## Motions
 Motions are a powerful way that vim uses to combine the keyboard shortcuts into keymaps. The best way to explain them is by example. Let's look at `d a p` for example. `d` here stands for delete. `a` tells the deletion command to delete around something. `p` tells it to delete around the paragraph you are currently in. This can also be combined with curly braces or any other text object selector. In this post, you will learn more cool ways to use motions. 
 
+## Navigating Text with Motions
+
+Here I will present some of the ways to move around text using motions like `w` or `b`. These are used to move around the text more quickly and more in the mindset of the elements in your text instead of the relative position of the cursor.
+
+Key | Result
+--|--
+`w` | move forward by one word
+`W` | move forward by one word excl. special characters
+`e` | move forward to the end of the word
+`E` | move forward to the end of the word excl. special characters
+`b` | move backward by one word
+`B` | move backward by one word excl. special characters
+`f` `<char>`| move to the next occurence of the character given
+`F` `<char>` | move to the previous occurrence of the character given
+`t` `<char>` | move until the next occurrence of the character given
+`T` `<char>` | move until the previous occurrence of the character given
+
+Here, the term "excl. special characters" means that special characters do not count as individual words. Therefore, the motions will behave a little different. For example moving forward by one word will count a period at the end of a word as part of the word, while a dash that is in between spaces will simply be ignored.
 
 ---
 ## Ways to go to insert mode
@@ -59,9 +79,59 @@ Key | Result
 `a` | append text after cursor
 `A` | append text at end of line
 `i` | insert text before cursor
-`I` | insert text before block (consecutive lines)
+`I` | insert text at the start of line
 `o` | open line below
 `O` | open line above
+
+## Editing, but more quickly
+
+As vim cannot improve your writing speed, it can accelerate you in editing text. Here are some of the motions used to help with that
+
+Key | Result 
+-- | --
+`c` + motion| change (delete and insert)
+visual, `c` | change highlighted text
+`C` | change until end of line
+`cc` | delete whole line and insert
+`d` + motion| delete
+visual, `d` | delete highlighted text
+`D` | delete until end of line
+`dd` | delete whole line
+`s` | change character to the right of the cursor (alias of `cl`)
+`S` | change entire line (alias of `cc`)
+`x` | Deletes the character on the cursor
+`X` | Deletes the character before the cursor
+
+As you can see, deleting `d` and changing `c` behave very similar. Only the mode you end up in changes.
+
+In many cases, you will see that hitting the initial key twice will extend the idea of the motion to the whole line, like `cc`, or `dd` which change the whole line or delete the whole line entirely.
+
+Also note that the `c` and `d` key will put all deleted text into the `x`-Register. So you can always paste your changed text somewhere else
+
+---
+## Visual Modes
+
+There are several visual modes to talk about. Here is a quick overview of them:
+
+Mode | Explanation
+--|--
+Visual | Standard visual mode, highlight text from start to end with cursor movements
+Visual Line | Line Selection mode, highlight full lines, moving up or down
+Visual Block | Selects text as a block. Allows changes in vertical scenarios
+
+Notes: 
+- Changing text in Visual Block Mode does not show the changes you are doing on all lines. They take effect after leaving insert mode.
+
+
+---
+## Undo and Redo
+Similar to all other editors, undo and redo exist here, but not like the familiar way you are probably already used to.
+
+Key | Purpose
+--|--
+`u` | undo
+`U` | undo all changes made on this line
+`CTRL` + `r` | redo
 
 
 ---
@@ -72,13 +142,13 @@ There are several ways of searching for text. Here are some of the ways I use to
 Keys | Purpose
 -- | --
 `/` | open find menu, type what to search for
-`?` | open find menu, search backwards (I dont actually use this one)
+`?` | open find menu, search backwards (I don't actually use this one)
 `n` | go to next search result
 `N` | go to previous search result
-`*` | find all occurence of the word your cursor is at
+`*` | find all occurrence of the word your cursor is at
 
 Then replacing the text that was found is done with the `c`(change) key.
-A good motion to get started is `c i w`. This means "change in word" and will replace the word your cursor is at and put you in insert mode. After you made your changes you can hit `esc` to go back to normal mode, `n` to find the next occurence and hit `.` to replay the action you made before. This will rename the next occurence of your search to your newly given name.
+A good motion to get started is `c i w`. This means "change in word" and will replace the word your cursor is at and put you in insert mode. After you made your changes you can hit `esc` to go back to normal mode, `n` to find the next occurence and hit `.` to replay the action you made before. This will rename the next occurrence of your search to your newly given name.
 
 
 ---
@@ -90,7 +160,8 @@ Key | Result
 `y` (normal mode)| yank text. e.G. `y w` copies the word on the cursor
 `y` (visual mode) | yank highlighted text
 `*y`| copy into system clipboard
-`p` | paste text at cursor
+`p` | line in buffer: put line below, non-line in buffer: put text after cursor
+`P` | line in buffer: put line above, non-line in buffer: put text before cursor
 
 
 ---
@@ -102,12 +173,49 @@ Key | Result
 `q<letter>` | start recording a macro, save it in the letters register. Valid registers are all lower case letters a-z.
 `q` (when done recording) | save macro
 `@<letter>` | replay macro at the letters register
+`@@` | shortcut to replay the latest macro
 
 This can also be connected with motions. e.G. `5 @ a` replays the register a 5 times.
 
 
+## Marks (Waypoints)
+
+You can set Marks using the `m` - Key followed by a letter a-z. Similar to macros, this will save this spot in the text as a Waypoint. Unlike line numbers, marks remember the locations of specific text objects. Therefore, inserting and removing lines do not change the location of your marks.
+
+Hitting the `'` - Key followed by the letter you saved will then jump to those marks.
+What's cool here is that you can set global marks. Meaning you can set marks on more than just one file. Using a capitalized letter as a mark will upon jumping to that mark open up that text file and jump to that mark, no matter where you were.
+
+You can always check what marks you set in command mode: `:marks` will display all set marks.
+In addition to that, you can append the command with a sequence of letters, this will then only show marks on those letters, if they exist.
+
+Deleting a mark is done like this:
+
+Command | Effect
+-- | --
+`:delm` + `<letter>` | deletes the mark of this specific letter
+`:delmarks` + `<letter>` | deletes the mark of this specific letter
+`:delm` + `<letter>-<letter>` | deletes marks in range from letter to letter
+`:delm!` | deletes all lowercase marks
+`:delmarks!` | deletes all lowercase marks
+
+Notes:
+- Marks are a core feature of vim. No need for neovim or any plugin.
+- This usage of the word Marks is derived from the word Bookmarks, according to Mental Outlaw.
+- Marks are case-sensitive, so a and A are different marks, note that uppercase marks are used for global marks
 
 ---
+## And then there is Z...
+
+`z` acts as the punching bag for many things that could not be associated with any other key. But still it offers a lot of nice functionality. Here are some of the ways that `z` can help in everyday coding and text editing.
+
+Motions | Purpose
+---|---
+`z` `t` | moves the cursor and the text-view to the top of the screen
+`z` `b` | moves the cursor and the text-view to the bottom of the screen
+`z` `z` | moves the cursor and the text-view to the center of the screen
+`Z` `Z` | alias to `:wq`, save and quit
+`Z` `Q` | alias to `:q!`, save and quit
+
 ## Random cool motions and shortcuts
 
 ### Motions
@@ -123,3 +231,5 @@ Motion | Result
 ---
 ## Resources 
 [Youtube: typecraft "30 Vim commands"](https://www.youtube.com/watch?v=RSlrxE21l_k)
+[Youtube Playlist: Vim Alphabet](https://www.youtube.com/playlist?list=PLnc_NxpmOxaNqdGvUg8RBi8ZTaZGPdqBD)
+[Youtube: How to Use Marks in VIM](https://www.youtube.com/watch?v=o4x4jUcHJwk)
