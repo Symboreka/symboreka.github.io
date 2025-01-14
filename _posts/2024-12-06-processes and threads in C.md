@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Vim Cheatsheet
-date: 2024-11-30
-categories: [post, vim, tools]
-tags: [vim, editor, cheatsheet, neovim]
+title: Processes and Threads in C
+date: 2025-02-10
+categories: [post, Programming, operating systems]
+tags: [studying, operating systems, writeup]
 ---
 
 ## Introduction
