@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Browser Addons that keep me sane
-date: 2025-02-10
+date: 2025-01-14
 categories: [Firefox, Addons]
 tags: [Firefox, adblockers, addons, youtube]
 ---
