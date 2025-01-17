@@ -113,11 +113,11 @@ Also note that the `c` and `d` key will put all deleted text into the `x`-Regist
 
 There are several visual modes to talk about. Here is a quick overview of them:
 
-Mode | Explanation
---|--
-Visual | Standard visual mode, highlight text from start to end with cursor movements
-Visual Line | Line Selection mode, highlight full lines, moving up or down
-Visual Block | Selects text as a block. Allows changes in vertical scenarios
+Mode | Key | Explanation
+--|--|---
+Visual | `v` | Standard visual mode, highlight text from start to end with cursor movements
+Visual Line |`V`| Line Selection mode, highlight full lines, moving up or down
+Visual Block | `CTRL` + `v` |  Selects text as a block. Allows changes in vertical scenarios
 
 Notes: 
 - Changing text in Visual Block Mode does not show the changes you are doing on all lines. They take effect after leaving insert mode.
