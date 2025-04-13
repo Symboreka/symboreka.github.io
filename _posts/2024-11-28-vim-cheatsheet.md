@@ -51,6 +51,13 @@ Keys | Result
 ## Motions
 Motions are a powerful way that vim uses to combine the keyboard shortcuts into keymaps. The best way to explain them is by example. Let's look at `d a p` for example. `d` here stands for delete. `a` tells the deletion command to delete around something. `p` tells it to delete around the paragraph you are currently in. This can also be combined with curly braces or any other text object selector. In this post, you will learn more cool ways to use motions. 
 
+Here is a quick list of available motions:
+
+Key | Result
+--|--
+`i` | inside (apply command to the inside of whatever follows)
+`a` | around (apply command around whatever follows)
+
 ## Navigating Text with Motions
 
 Here I will present some of the ways to move around text using motions like `w` or `b`. These are used to move around the text more quickly and more in the mindset of the elements in your text instead of the relative position of the cursor.
@@ -69,6 +76,14 @@ Key | Result
 `T` `<char>` | move until the previous occurrence of the character given
 
 Here, the term "excl. special characters" means that special characters do not count as individual words. Therefore, the motions will behave a little different. For example moving forward by one word will count a period at the end of a word as part of the word, while a dash that is in between spaces will simply be ignored.
+
+Here are some more advanced motions for moving around text objects
+
+Key | Result
+--|--
+`{` | move to beginning of next paragraph
+`}` | move to beginning of previous paragraph
+
 
 ---
 ## Ways to go to insert mode
@@ -231,5 +246,10 @@ Motion | Result
 ---
 ## Resources 
 [Youtube: typecraft "30 Vim commands"](https://www.youtube.com/watch?v=RSlrxE21l_k)
+
 [Youtube Playlist: Vim Alphabet](https://www.youtube.com/playlist?list=PLnc_NxpmOxaNqdGvUg8RBi8ZTaZGPdqBD)
+
 [Youtube: How to Use Marks in VIM](https://www.youtube.com/watch?v=o4x4jUcHJwk)
+
+[Youtube: A powerful way to make Coding in Neovim better](https://www.youtube.com/watch?v=CEMPq_r8UYQ)
+
