@@ -116,6 +116,7 @@ visual, `d` | delete highlighted text
 `S` | change entire line (alias of `cc`)
 `x` | Deletes the character on the cursor
 `X` | Deletes the character before the cursor
+`J` | Join two lines together (remove newline on current line)
 
 As you can see, deleting `d` and changing `c` behave very similar. Only the mode you end up in changes.
 
@@ -174,10 +175,23 @@ Key | Result
 -- | --
 `y` (normal mode)| yank text. e.G. `y w` copies the word on the cursor
 `y` (visual mode) | yank highlighted text
-`*y`| copy into system clipboard
+`"*y`| copy into system clipboard
 `p` | line in buffer: put line below, non-line in buffer: put text after cursor
 `P` | line in buffer: put line above, non-line in buffer: put text before cursor
 
+---
+## Registers and the System Clipboard
+Imagine you want to copy more than one thing at a time and/or use the system clipboard.
+
+Activating a register is used with the `"`-Key. This tells vim to do whatever follows in the register following the `"`.
+Valid register names are `a-z`, `A-Z`. There are more, they will be explained later.
+
+This example yanks 3 words into the `f`-Register. `"fy3w`.
+You see, it can be used as a normal motion.
+
+When visually marking some text that should go to a register, use the `"a` just before the `y` command.
+
+The System Clipboard is the `*`-Register, use that to copy to the clipboard. `"*y4w`
 
 ---
 ## Macros, repeating actions
@@ -218,6 +232,47 @@ Notes:
 - This usage of the word Marks is derived from the word Bookmarks, according to Mental Outlaw.
 - Marks are case-sensitive, so a and A are different marks, note that uppercase marks are used for global marks
 
+
+
+---
+## Working with multiple files
+
+### Using split panes
+Here are some useful commands that enable working with multiple windows in one vim instance.
+
+Command | Effect
+-- | --
+`:split` | splits pane horizontally, opens same file in both
+`:split <filename>` | split pane horizontally, opens filename in second pane
+`:vsplit` | same as above, but split vertically
+`:new` | split pane horizontally, open new file in second pane
+`:vnew` | same as above, but split vertically
+`:edit <filename>` | switches active document on current pane
+`CTRL+W` + `w`| switch focus between windows
+`:close` | close the current pane. Will not work if this pane is the only one.
+`:only` | close all other panes
+`<height>CTRL+W` + `+` | increase pane size by height (defaule 1)
+`<height>CTRL+W` + `-` | decrease pane size by height (defaule 1)
+
+Command | Effect
+-- | --
+`CTRL+W` + `h` | move to the pane on the left
+`CTRL+W` + `j` | move to the pane below
+`CTRL+W` + `k` | move to the pane above
+`CTRL+W` + `l` | move to the pane on the right
+`CTRL+W` + `t` | move to the most top pane
+`CTRL+W` + `b` | move to the most bottom pane
+
+You can use the capital `HJKL` to move the windows to the far edges respectively
+
+### Using Tabs
+Command | Effect
+-- | -- 
+`:tabedit <filename>` | opens file in new tab
+`:tab split` | open same file in new tab
+`gt` | move to the next tab
+`gT` | move to the previous tab
+
 ---
 ## And then there is Z...
 
@@ -243,8 +298,17 @@ Motion | Result
 `gv` | reselect previous selection
 
 
+## Enter special characters
+
+`CTRL+K` + <letters for character>` is used to paste special characters.
+
+To view all available special characters, use `:diagraphs`. (Note: Not available in Vim for VSCode)
+
 ---
 ## Resources 
+
+[Youtube: entire vim manual reading](https://www.youtube.com/watch?v=rT-fbLFOCy0)
+
 [Youtube: typecraft "30 Vim commands"](https://www.youtube.com/watch?v=RSlrxE21l_k)
 
 [Youtube Playlist: Vim Alphabet](https://www.youtube.com/playlist?list=PLnc_NxpmOxaNqdGvUg8RBi8ZTaZGPdqBD)
@@ -253,3 +317,4 @@ Motion | Result
 
 [Youtube: A powerful way to make Coding in Neovim better](https://www.youtube.com/watch?v=CEMPq_r8UYQ)
 
+´
