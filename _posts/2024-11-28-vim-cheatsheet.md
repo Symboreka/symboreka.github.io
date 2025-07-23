@@ -267,11 +267,12 @@ You can use the capital `HJKL` to move the windows to the far edges respectively
 
 ### Using Tabs
 Command | Effect
--- | -- 
+--- | --- 
 `:tabedit <filename>` | opens file in new tab
 `:tab split` | open same file in new tab
 `gt` | move to the next tab
 `gT` | move to the previous tab
+`:q` | close tab
 
 ---
 ## And then there is Z...
