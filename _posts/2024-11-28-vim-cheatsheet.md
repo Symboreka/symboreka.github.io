@@ -318,5 +318,3 @@ To view all available special characters, use `:diagraphs`. (Note: Not available
 [Youtube: How to Use Marks in VIM](https://www.youtube.com/watch?v=o4x4jUcHJwk)
 
 [Youtube: A powerful way to make Coding in Neovim better](https://www.youtube.com/watch?v=CEMPq_r8UYQ)
-
-´
