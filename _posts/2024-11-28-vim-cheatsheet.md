@@ -311,6 +311,7 @@ Motion | Result
 `g` `shift+a` | find all references
 `g` `h` | open hover information
 `g` `shift+s` | search symbols
+`g` `.` | show code actions
 
 
 Find all zed specific keybinds at [zeds documentation](https://zed.dev/docs/vim#language-server)
