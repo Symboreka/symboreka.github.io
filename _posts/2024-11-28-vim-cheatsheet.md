@@ -309,6 +309,11 @@ Motion | Result
 `g` `d` | Go to definition
 `g` `y` | Go to type definition
 `g` `shift+a` | find all references
+`g` `h` | open hover information
+`g` `shift+s` | search symbols
+
+
+Find all zed specific keybinds at [zeds documentation](https://zed.dev/docs/vim#language-server)
 
 
 ## Enter special characters
