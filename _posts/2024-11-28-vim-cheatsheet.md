@@ -299,6 +299,17 @@ Motion | Result
 `guu` | capitalize whole line
 `gv` | reselect previous selection
 
+### Editor Specific motions
+
+in my Zed instance, these shortcuts are either configured or default:
+
+Motion | Result
+--|--
+`g``r``n` | rename symbol (refactor)
+`g` `d` | Go to definition
+`g` `y` | Go to type definition
+`g` `shift+a` | find all references
+
 
 ## Enter special characters
 
