@@ -11,6 +11,7 @@ This is a placeholder post to keep some information and references. Backstory is
 
 
 ## References
+[Medium Guide for Server](https://medium.com/@Jonese1234/how-to-set-up-a-dedicated-trackmania-server-with-xaseco-records-eyepiece-d8a44dbf528e)
 [Youtube: How to Setup Dedicated Server with xAseco](https://www.youtube.com/watch?v=QYf6D8G4hiQ)
 [Docker Container for TMNF Server](https://github.com/mcarigs/tmuf-dedicated-server-docker/)
 [Official xAseco Docs](https://server.xaseco.org/)
