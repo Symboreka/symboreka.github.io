@@ -13,7 +13,7 @@ services:
     expose:
       - "4000"
     volumes:
-      - "/Users/rico/Documents/Visual Studio Code/symboreka.github.io:/usr/src/app:rw"
+      - "/Users/rico/Documents/Code/symboreka.github.io:/usr/src/app:rw"
 
     deploy:
       resources:
